@@ -1,0 +1,42 @@
+Drop table IF exists class;
+create table class(
+ID bigint(20) not null auto_increment,
+class_name varchar(50) default null,
+primary key(ID)
+);
+
+insert into class values (1, 'Standard Ten'),(2, 'Standard Eleven');
+====================================================================
+create table teachers(
+ID bigint(20) not null auto_increment,
+teacher_name varchar(30) default null,
+designation varchar(30) default null,
+
+primary key(ID)
+)
+insert into teachers values(1,'Teacher1','Principle'),(2,'Teacher2','Seniour Teacher'),
+(3,'Teacher3','Seniour Teacher');
+=================================================================
+Drop table IF exists student;
+CREATE TABLE student (
+ID bigint(20) NOT NULL AUTO_INCREMENT,
+student_name varchar(40) DEFAULT NULL,
+idx bigint (10) DEFAULT NULL,
+class_ID bigint (10) DEFAULT NULL,
+
+PRIMARY KEY(ID)
+);
+
+insert into student values (1, 'sudent101',0,1),(2, 'sudent102',1,1),
+(3, 'sudent103',2,2);
+
+==================================================================
+create table subjects(
+ID bigint(20) not null auto_increment,
+subjects varchar(30) default null,
+class_ID int not null,
+teacher-ID int not null,
+primary key(ID)
+);
+
+insert into subjects values(1,'sub1',1,1),(2,'sub2',1,2),(3,'sub3',1,3),(4,'sub4',2,1),(5,'sub5',2,2);
